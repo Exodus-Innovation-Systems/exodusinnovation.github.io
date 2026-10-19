@@ -53,3 +53,16 @@ h2{font-size:1.7rem;margin:0 0 1rem;padding-left:.75rem;border-left:4px solid va
 .note{color:var(--muted)}
 
 footer{padding:2rem 1.5rem;color:var(--muted);border-top:1px solid var(--outline)}
+
+.week{background:var(--surface);border:1px solid var(--outline);border-top:3px solid var(--sand);border-radius:12px;padding:1.5rem;margin-top:1.5rem}
+.week h3{margin:0;color:var(--sand-light);font-size:1.3rem}
+.week-sub{margin:.25rem 0 1rem;color:var(--moss);font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:.85rem}
+.features{padding-left:1.3rem;margin:0}
+.features>li{margin-bottom:1.25rem;color:var(--muted)}
+.features>li::marker{color:var(--sand);font-weight:700}
+.features strong{color:var(--fg)}
+.features figure{margin:.75rem 0 0;max-width:640px;background:var(--surface-lo);border:1px solid var(--outline);border-radius:10px;overflow:hidden}
+.features figcaption{padding:.5rem .85rem;font-size:.9rem}
+.features .pair{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.75rem}
+.features .pair figure{margin:0;max-width:none}
+@media (max-width:700px){.features .pair{grid-template-columns:1fr}}

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pipe design — Exodus User Manual</title>
+  <meta name="description" content="Record the surface along your route, tell Exodus the depth and slope limits your pipe must respect, and it works out the buried profile for you. Then add stations for the special spots.">
+  <meta name="theme-color" content="#14191C">
+  <link rel="icon" type="image/png" href="../images/emblem.png">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="../index.html"><img src="../images/emblem.png" alt="" width="40" height="40"><img class="wordmark" src="../images/brand-label.png" alt="Exodus Innovation Systems" height="36"></a>
+    <nav>
+      <a href="../index.html#app">The App</a>
+      <a href="../index.html#capabilities">Capabilities</a>
+      <a href="index.html">Manual</a>
+      <a href="../index.html#how">How it works</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="doc-wrap">
+    <nav class="doc-nav" aria-label="Manual chapters"><p class="doc-nav-title"><a href="index.html">User Manual</a></p><ol><li><a href="getting-started.html">Getting started</a></li><li><a href="survey.html">Survey run screen</a></li><li><a href="gps-diagnostics.html">GPS Diagnostics</a></li><li><a href="tile-plow.html">Tile plow run screen</a></li><li class="on"><a href="pipe-design.html">Pipe design</a></li><li><a href="grading.html">Grading and as-installed</a></li><li><a href="tie-in.html">Tie-ins</a></li><li><a href="quick-reference.html">Quick reference</a></li></ol></nav>
+    <main class="doc">
+      <p class="crumb"><a href="index.html">User Manual</a> &rsaquo; Pipe design</p>
+      <p class="eyebrow">Pipe design</p>
+      <h1 class="doc-title">From a recorded line to a buried pipe design.</h1>
+      <p class="lead">Record the surface along your route, tell Exodus the depth and slope limits your pipe must respect, and it works out the buried profile for you. Then add stations for the special spots.</p>
+      <div class="cards highlights"><article><h3>Constraints you control</h3><p>Burial depth range, optimal depth, slope limits, transition length and outlet location.</p></article><article><h3>A chart you can read</h3><p>Surveyed ground, the designed pipe and the allowed burial band. Trouble spots are marked in yellow with a suggested fix.</p></article><article><h3>Stations for real jobs</h3><p>Add a required depth to clear a crossing, a reducer where the pipe size changes, or cut the line short.</p></article><article><h3>Your pipe, not ours</h3><p>The inventory starts empty and you enter the pipes you actually lay.</p></article></div>
+      <p class="on-page">On this page: <a href="#pipe-design">Designing a pipe</a> · <a href="#design-stations">Design stations</a> · <a href="#pipe-inventory">Pipe inventory</a></p>
+      <div class="chap" id="pipe-design"><h2>Designing a pipe</h2><p>A <strong>pipe design</strong> turns a recorded 3D line (the surface along the route) into a buried pipe: it works out how deep the pipe must be, and at what slope, along its whole length. The result is a design you can activate and grade to.</p>
+<h3 id="open-the-pipe-design-screen">Open the Pipe Design screen</h3>
+<ol><li>Record a 3D line along the route (see <a href="survey.html#points-of-interest-on-a-line" class="xref">Points of interest on a line</a> for lines).</li><li>Open the left panel and expand <strong>Lines 3D</strong>.</li><li>Tap the profile icon (<strong>Design from &lt;line name&gt;</strong>) at the right of the line.</li></ol>
+<figure><img src="../images/manual/pipe-design/103-plow-lines3d-design-button.jpg" alt="The Design from line button next to a 3D line" loading="lazy"><figcaption>The Design from line button next to a 3D line</figcaption></figure>
+<p>The Pipe Design screen opens on a copy of the line. Nothing is saved until you press <strong>Save</strong>.</p>
+<figure><img src="../images/manual/pipe-design/110-pipe-design-initial.jpg" alt="The Pipe Design screen" loading="lazy"><figcaption>The Pipe Design screen</figcaption></figure>
+<h3 id="the-settings">The settings</h3>
+<p>The boxes along the top are the constraints the pipe must fit inside. The solver finds the pipe that stays inside them and stays as close to the optimal depth as it can. All depths are measured down from the ground surface.</p>
+<div class="tbl"><table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Min burial depth</strong></td><td>The shallowest the pipe may be, for cover and frost. Default 0.5 m.</td></tr><tr><td><strong>Max burial depth</strong></td><td>The deepest the pipe may be, for what the machine can dig. Default 2.1 m.</td></tr><tr><td><strong>Optimal depth</strong></td><td>The depth the solver aims for wherever it can. Default 1.2 m.</td></tr><tr><td><strong>Outlet depth</strong></td><td>How deep the pipe is at the outlet end, where the water leaves. Default 1.2 m. Must be between min and max depth. See <a href="pipe-design.html#measure-outlet" class="xref">Measure outlet</a> to take it from the plow bit.</td></tr><tr><td><strong>Min transition length</strong></td><td>The shortest distance over which the slope may change from the minimum to the maximum. A bigger number gives gentler bends in the pipe's profile. Default 20 m, allowed from 0.3048 m (1 ft) to 100 m.</td></tr><tr><td><strong>Min slope</strong></td><td>The flattest the pipe may run, so water keeps moving. Default 0.5 %, cannot be below 0.</td></tr><tr><td><strong>Max slope</strong></td><td>The steepest the pipe may run. Default 5 %, must be above the minimum.</td></tr><tr><td><strong>Outlet location</strong></td><td>Which end of the line is the outlet: <strong>Line start</strong> or <strong>Line end</strong>. The pipe falls toward it.</td></tr></tbody></table></div>
+<p>If the settings contradict each other (for example, the minimum depth deeper than the optimal), the screen says so in plain words and the pipe is not built until it is fixed.</p>
+<h3 id="the-profile-chart">The profile chart</h3>
+<p>The chart is a side view along the line.</p>
+<div class="tbl"><table><thead><tr><th>Line</th><th>Meaning</th></tr></thead><tbody><tr><td><strong>Surveyed</strong> (dark green)</td><td>The ground surface along your recorded line.</td></tr><tr><td><strong>Pipe</strong> (bright green)</td><td>The designed pipe, its flow line. A small square marks the outlet end.</td></tr><tr><td><strong>Burial band</strong> (shaded)</td><td>The zone between the minimum and maximum depths below the ground. The pipe must stay inside it.</td></tr><tr><td><strong>Violation</strong> (yellow)</td><td>A stretch where the pipe could not stay inside the band.</td></tr></tbody></table></div>
+<p>Tap a yellow stretch for details: how many stretches are outside, the worst one, and the fix suggested (for example <em>Raise max burial depth by 0.3 m</em>). Where the ground is too steep or too lumpy for the limits you set, loosen the limits, move the outlet, or add a required depth point.</p>
+<p>Tap anywhere on the chart for the readout in <a href="pipe-design.html#design-stations" class="xref">Design stations</a>.</p>
+<h3 id="the-pipe-row-and-why-save-is-greyed-out">The pipe row, and why Save is greyed out</h3>
+<p>A banner reads <strong>Pipe Required</strong> until you pick the pipe, because Save needs to know what pipe is being laid. Under the chart:</p>
+<ul><li><strong>+ Add pipe</strong> appears while the inventory is empty and opens the pipe inventory (see <a href="pipe-design.html#pipe-inventory" class="xref">Pipe inventory</a>).</li><li>Once pipes exist, the row reads <strong>Pick pipe</strong>. Tap it and choose the pipe for the first stretch. The gear opens the inventory.</li></ul>
+<figure><img src="../images/manual/pipe-design/120-pipe-design-pipe-picker.jpg" alt="The pipe row with Pick pipe and the inventory gear" loading="lazy"><figcaption>The pipe row with Pick pipe and the inventory gear</figcaption></figure>
+<figure><img src="../images/manual/pipe-design/121-pipe-picker-menu.jpg" alt="Choosing a pipe from the inventory" loading="lazy"><figcaption>Choosing a pipe from the inventory</figcaption></figure>
+<figure><img src="../images/manual/pipe-design/122-pipe-design-pipe-chosen.jpg" alt="A pipe chosen and the Save button enabled" loading="lazy"><figcaption>A pipe chosen and the Save button enabled</figcaption></figure>
+<p>Only pipes of the design's <strong>role</strong> (main, lateral or sub-lateral) are listed. Choosing the first pipe sets the design's role, and its saved settings (below) fill in the boxes.</p>
+<h3 id="pipe-roles-and-saved-settings">Pipe roles and saved settings</h3>
+<p>The top-right of the screen shows the design's role (<strong>Main</strong>, <strong>Lateral</strong> or <strong>Sub-lateral</strong>) and a settings button.</p>
+<figure><img src="../images/manual/pipe-design/111-pipe-design-preset-menu.jpg" alt="The saved pipe config menu" loading="lazy"><figcaption>The saved pipe config menu</figcaption></figure>
+<ul><li><strong>Save &lt;role&gt; pipe config</strong> stores the current boxes as your starting point for every new design of that role.</li><li><strong>Reset to my saved &lt;role&gt; config</strong> puts your saved boxes back.</li><li>If the boxes differ from the saved ones, the screen says so.</li></ul>
+<a id="measure-outlet"></a>
+<h3 id="measure-outlet">Measure outlet</h3>
+<p><strong>Measure outlet</strong> sets the end of the design where the plow bit actually is. Use it when you have dug to the real outlet and want the design to start from there.</p>
+<p>The button is the plow icon beside the <strong>Outlet depth</strong> box.</p>
+<ol><li>Put the plow bit in the ground at the outlet.</li><li>Tap the button.</li><li>The outlet end of the line is moved to the bit. If the bit is <strong>past</strong> the end of the line, the line is extended out to it. If it is <strong>along</strong> the line, the part beyond the bit is cut off.</li><li>The outlet depth is taken from the bit, and the design is built again.</li></ol>
+<div class="adm caution"><strong>Caution</strong><p>Measuring the outlet throws away any stations you placed, because they were measured along the old line. Place stations <strong>after</strong> you measure.</p></div>
+<p>The bit must be within 20 m of the end of the line. Otherwise the screen says <em>Can't build - Measured outlet is too far from end of line</em>. In the screenshot the bit is far from the line because the plow was running in Simulation. The button is not available when the design is a tie-in, because there the outlet is fixed by the pipe being joined.</p>
+<figure><img src="../images/manual/pipe-design/134-measure-outlet-result.jpg" alt="The message when the bit is too far from the line" loading="lazy"><figcaption>The message when the bit is too far from the line</figcaption></figure>
+<p>Once the outlet has been measured, a button appears to <strong>Go back to the surveyed line and optimal outlet depth</strong>.</p></div>
+<div class="chap" id="design-stations"><h2>Design stations</h2><p>A <strong>station</strong> is a marked spot along the pipe, measured as a distance from the start of the line. Stations tell the solver about special conditions, and tell the operator about changes that are coming up. They are drawn on the chart as vertical lines with a small marker above, and listed along the pipe row.</p>
+<p>You make and edit stations from the profile chart on the Pipe Design screen.</p>
+<h3 id="add-a-station">Add a station</h3>
+<ol><li><strong>Tap</strong> the chart where you want the station. A readout opens.</li><li>Tap one of the three buttons at the bottom of the readout.</li></ol>
+<figure><img src="../images/manual/pipe-design/123-station-popup.jpg" alt="The readout shown when you tap the chart, with the three station buttons" loading="lazy"><figcaption>The readout shown when you tap the chart, with the three station buttons</figcaption></figure>
+<p>The readout shows:</p>
+<div class="tbl"><table><thead><tr><th>Row</th><th>Meaning</th></tr></thead><tbody><tr><td>From start / From end</td><td>Distance from each end of the line.</td></tr><tr><td>Depth</td><td>The pipe's depth below the ground at that spot.</td></tr><tr><td>Slope</td><td>The slope of the pipe there.</td></tr><tr><td>Line elev</td><td>The elevation of the pipe's flow line.</td></tr><tr><td>Surface elev</td><td>The ground elevation.</td></tr><tr><td>Depth here</td><td>Only when you tapped <strong>below</strong> the ground: the depth where you tapped. That is the depth a <strong>required depth</strong> station will be set to.</td></tr></tbody></table></div>
+<p>A station cannot be placed closer than 5 cm to another one, or to either end of the line.</p>
+<p>The three buttons, left to right:</p>
+<h4 id="cut-end-of-run-station">Cut (End of Run station)</h4>
+<p>The scissors <strong>cut</strong> the line at that spot. The part of the line farther from the outlet is folded away and is not part of the pipe.</p>
+<figure><img src="../images/manual/pipe-design/129-cut-popup.jpg" alt="Tapping the chart at 111 m before cutting" loading="lazy"><figcaption>Tapping the chart at 111 m before cutting</figcaption></figure>
+<figure><img src="../images/manual/pipe-design/130-cut-line-added.jpg" alt="The line after a cut: the removed part is hatched" loading="lazy"><figcaption>The line after a cut: the removed part is hatched</figcaption></figure>
+<ul><li>The removed part is drawn hatched at the end of the chart, and the profile re-scales to the part that is left.</li><li>The design is solved again for the shortened line.</li><li>There can be only one cut. A new cut replaces the old one.</li><li>Hold the marker, then press the <strong>bin</strong> button, to delete the cut and restore the full line.</li></ul>
+<figure><img src="../images/manual/pipe-design/131-cut-station-card.jpg" alt="The End of Run station card" loading="lazy"><figcaption>The End of Run station card</figcaption></figure>
+<h4 id="pipe-change-reducer">Pipe change (reducer)</h4>
+<p>The <strong>reducer</strong> button starts a new <strong>stretch</strong> of pipe at that spot, laid with the pipe that was there before. Use it when the pipe size changes.</p>
+<figure><img src="../images/manual/pipe-design/127-reducer-added.jpg" alt="A pipe change adds a second pipe selector" loading="lazy"><figcaption>A pipe change adds a second pipe selector</figcaption></figure>
+<ul><li>The row under the chart now has one pipe selector for every stretch.</li><li>Tap a selector to pick a different pipe for that stretch. Only pipes of the design's role are offered.</li><li>A pipe change does <strong>not</strong> change the buried profile. It only changes which pipe is laid where, so the design is not solved again.</li><li>On the run screen the operator is warned as the machine nears it. If the size changes, it is called a <strong>reducer</strong> and shows the sizes either side (for example <em>152 mm → 102 mm</em>).</li></ul>
+<figure><img src="../images/manual/pipe-design/128-reducer-two-pipes.jpg" alt="The second stretch changed to a 4 inch pipe" loading="lazy"><figcaption>The second stretch changed to a 4 inch pipe</figcaption></figure>
+<ul><li>Hold the marker, then press the <strong>bin</strong> button, to delete the station. The stretch it started goes back to the pipe before it.</li></ul>
+<h4 id="required-depth">Required depth</h4>
+<p>The <strong>required depth</strong> button (a pipe with a pin) forces the pipe through a particular depth at a particular spot, for example to clear a crossing or to go under a utility. It is only available where you tapped <strong>below</strong> the ground.</p>
+<ol><li>Tap the chart below the ground surface at the place.</li><li>Tap the required-depth button.</li><li>A <strong>Depth</strong> box opens, pre-filled with the depth where you tapped. Type the depth you want, then tap the check mark.</li></ol>
+<figure><img src="../images/manual/pipe-design/124-required-depth-draft.jpg" alt="The depth box for a required depth point" loading="lazy"><figcaption>The depth box for a required depth point</figcaption></figure>
+<p>The station is added and the design is solved again so the pipe passes through that point.</p>
+<figure><img src="../images/manual/pipe-design/125-required-depth-added.jpg" alt="The pipe bends through the required depth point" loading="lazy"><figcaption>The pipe bends through the required depth point</figcaption></figure>
+<p>To change it later, hold the marker. Its card shows <strong>Required depth</strong>, its distance from the start and an editable <strong>Depth</strong>. Closing the card applies the new depth and solves again. The <strong>bin</strong> button deletes it.</p>
+<figure><img src="../images/manual/pipe-design/126-station-info-card.jpg" alt="The required depth card" loading="lazy"><figcaption>The required depth card</figcaption></figure>
+<p>If the pipe cannot reach a point within the slope limits and the outlet depth, the screen warns <em>Required depth not reachable</em>, and the pipe goes as near as it can. Move the point, or change the outlet depth or the slope limits.</p>
+<h3 id="move-a-station">Move a station</h3>
+<p><strong>Touch and hold</strong> a station's marker and drag it along the chart. It stops short of its neighbours and of the ends. When you let go, a station that affects the buried pipe (a cut or a required depth) solves the design again. A pipe change does not.</p>
+<h3 id="summary-of-the-stations">Summary of the stations</h3>
+<div class="tbl"><table><thead><tr><th>Station</th><th>Button</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Required depth</strong></td><td>Pipe and pin</td><td>Holds the pipe at a depth at that spot. Solves again.</td></tr><tr><td><strong>Pipe change</strong> (reducer when the size changes)</td><td>Reducer</td><td>Starts a new stretch with a different pipe. Does not change the buried profile.</td></tr><tr><td><strong>End of run</strong> (cut)</td><td>Scissors</td><td>Removes the line beyond that spot. Only one. Solves again.</td></tr></tbody></table></div>
+<a id="design-saving"></a>
+<h3 id="design-saving">Save the design</h3>
+<p>Press <strong>Save</strong>. The design is saved to the project and is then available under <strong>Grade to</strong> in Grading mode. Save is only active once a pipe has been picked and the design is up to date with the settings. If you change a setting after the last build, press the Return key in the box (or change the value) so the design is solved again.</p></div>
+<div class="chap" id="pipe-inventory"><h2>Pipe inventory</h2><p>The pipe inventory is your list of the pipes you lay. Nothing is built in: it starts empty and you enter each pipe, so the design uses your real pipe.</p>
+<p>Open it from the Pipe Design screen with <strong>+ Add pipe</strong>, or with the gear beside the pipe row.</p>
+<figure><img src="../images/manual/pipe-design/112-pipe-design-add-pipe.jpg" alt="The empty Pipe inventory" loading="lazy"><figcaption>The empty Pipe inventory</figcaption></figure>
+<h3 id="add-a-pipe">Add a pipe</h3>
+<ol><li>Choose what it is used as: <strong>Main</strong>, <strong>Lateral</strong> or <strong>Sub-lateral</strong>. This sets which designs can use it and is the starting point for a new design.</li><li>Enter a <strong>Description</strong> that tells it apart in the list, for example <em>HDPE corrugated 6in</em>.</li><li>Enter the <strong>Inside diameter</strong> in millimetres. This is the inside of the pipe, not the outside. It decides how much water the pipe carries.</li><li>Leave <strong>Manning's roughness (n)</strong> at <strong>0.011</strong> (smooth corrugated plastic) unless the maker gives another value.</li><li>Tap <strong>Add to inventory</strong>.</li></ol>
+<figure><img src="../images/manual/pipe-design/113-inventory-form-filled.jpg" alt="The Add a pipe form filled in" loading="lazy"><figcaption>The Add a pipe form filled in</figcaption></figure>
+<figure><img src="../images/manual/pipe-design/114-inventory-form-bottom.jpg" alt="The roughness field and the Add to inventory button" loading="lazy"><figcaption>The roughness field and the Add to inventory button</figcaption></figure>
+<p>The pipe appears in the list on the left, grouped by role, with its diameter, role and roughness.</p>
+<figure><img src="../images/manual/pipe-design/116-inventory-two-pipes.jpg" alt="The inventory with two pipes" loading="lazy"><figcaption>The inventory with two pipes</figcaption></figure>
+<h3 id="edit-a-pipe">Edit a pipe</h3>
+<p>Tap the <strong>gear</strong> beside the pipe. The form loads with its values; change them and tap <strong>Save changes</strong>, or <strong>Cancel changes</strong>.</p>
+<figure><img src="../images/manual/pipe-design/118-inventory-edit-bottom.jpg" alt="Editing a pipe" loading="lazy"><figcaption>Editing a pipe</figcaption></figure>
+<h3 id="delete-a-pipe">Delete a pipe</h3>
+<p>Tap the <strong>bin</strong> beside the pipe and confirm <strong>Delete</strong>.</p>
+<figure><img src="../images/manual/pipe-design/119-inventory-delete-confirm.jpg" alt="The delete confirmation" loading="lazy"><figcaption>The delete confirmation</figcaption></figure>
+<p>Designs that already use the pipe keep their own copy, so deleting a pipe does not change a design that was built with it.</p></div>
+      <div class="pager"><a class="prev" href="tile-plow.html">&larr; Tile plow run screen</a><a class="next" href="grading.html">Grading and as-installed &rarr;</a></div>
+    </main>
+  </div>
+  <footer>© <span id="year"></span> Exodus Innovation Systems</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

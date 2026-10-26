@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Getting started — Exodus User Manual</title>
+  <meta name="description" content="A five-step wizard walks you through your machine, its measurements, your GPS and your reference system. Finished steps get a check mark, and Save unlocks only when everything is complete, so nothing gets missed.">
+  <meta name="theme-color" content="#14191C">
+  <link rel="icon" type="image/png" href="../images/emblem.png">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="../index.html"><img src="../images/emblem.png" alt="" width="40" height="40"><img class="wordmark" src="../images/brand-label.png" alt="Exodus Innovation Systems" height="36"></a>
+    <nav>
+      <a href="../index.html#app">The App</a>
+      <a href="../index.html#capabilities">Capabilities</a>
+      <a href="index.html">Manual</a>
+      <a href="../index.html#how">How it works</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="doc-wrap">
+    <nav class="doc-nav" aria-label="Manual chapters"><p class="doc-nav-title"><a href="index.html">User Manual</a></p><ol><li class="on"><a href="getting-started.html">Getting started</a></li><li><a href="survey.html">Survey run screen</a></li><li><a href="gps-diagnostics.html">GPS Diagnostics</a></li><li><a href="tile-plow.html">Tile plow run screen</a></li><li><a href="pipe-design.html">Pipe design</a></li><li><a href="grading.html">Grading and as-installed</a></li><li><a href="tie-in.html">Tie-ins</a></li><li><a href="quick-reference.html">Quick reference</a></li></ol></nav>
+    <main class="doc">
+      <p class="crumb"><a href="index.html">User Manual</a> &rsaquo; Getting started</p>
+      <p class="eyebrow">Getting started</p>
+      <h1 class="doc-title">Set up once, then get to work.</h1>
+      <p class="lead">A five-step wizard walks you through your machine, its measurements, your GPS and your reference system. Finished steps get a check mark, and <em>Save</em> unlocks only when everything is complete, so nothing gets missed.</p>
+      <div class="cards highlights"><article><h3>Guided, one step at a time</h3><p>Vehicle, Measure, GPS, Reference and Companion, with jump-to-step navigation along the top.</p></article><article><h3>Pick a model, enter your tape measurements</h3><p>Choose the 3D model closest to your machine and Exodus draws it where your real antenna sits.</p></article><article><h3>Works with the receiver you have</h3><p>Bluetooth, Wi-Fi, or a built-in simulation so you can train without a receiver.</p></article><article><h3>Receiver and project systems kept apart</h3><p>Your receiver can output WGS 84 while the project works in State Plane. Exodus converts every position as it arrives.</p></article></div>
+      <p class="on-page">On this page: <a href="#home-screen-overview">Home screen overview</a> · <a href="#creating-a-survey-vehicle-intro">Creating a Survey Vehicle</a> · <a href="#measurements">Measurements</a> · <a href="#receiver-crs">Receiver reference system (CRS)</a> · <a href="#creating-a-project">Creating a project</a></p>
+      <div class="chap" id="home-screen-overview"><h2>Home screen overview</h2><p>Everything starts from the home screen. The three rows across the top (<strong>Project</strong>, <strong>Machine</strong>, <strong>Corrections</strong>) each show the items you have already created. The <strong>+</strong> tile at the end of a row creates a new one. Tap an existing tile to make it the active one (it turns green with a check mark).</p>
+<p>When the Project and Machine are both set, <strong>Enter Job</strong> at the bottom left opens the run screen.</p>
+<figure><img src="../images/manual/getting-started/00-home.jpg" alt="The Exodus home screen" loading="lazy"><figcaption>The Exodus home screen</figcaption></figure></div>
+<div class="chap" id="creating-a-survey-vehicle-intro"><h2>Creating a Survey Vehicle</h2><p>A Survey Vehicle is a machine whose only job is to <strong>measure</strong> the site: it records benchmarks, markers, lines and terrain. It has no blade or attachments. It can optionally carry a surveyor pole (rod) for shooting points on foot.</p>
+<h3 id="choose-the-vehicle-type">Choose the vehicle type</h3>
+<ol><li>On the home screen, tap the <strong>+</strong> tile in the <strong>Machine</strong> row.</li><li>Under <strong>Vehicle Type</strong>, select <strong>Survey Vehicle</strong>.</li><li>Under <strong>Vehicle</strong>, pick the 3D model that looks most like your machine (for example <em>Tesla Pickup</em> or <em>Golf Cart</em>). The model is only a visual stand-in, so you are free to pick whichever is closest in size.</li><li>Tap <strong>Select Vehicle</strong>.</li></ol>
+<figure><img src="../images/manual/getting-started/01-machine-picker.jpg" alt="The Select Vehicle screen" loading="lazy"><figcaption>The Select Vehicle screen</figcaption></figure>
+<figure><img src="../images/manual/getting-started/02-select-survey-vehicle.jpg" alt="Survey Vehicle selected with a model chosen" loading="lazy"><figcaption>Survey Vehicle selected with a model chosen</figcaption></figure>
+<p>The setup wizard has five steps, shown along the top as <strong>Vehicle</strong>, <strong>Measure</strong>, <strong>GPS</strong>, <strong>Reference</strong> and <strong>Companion</strong>. Completed steps show a check mark. You can tap any step in the header to jump to it, or use <strong>Back</strong> and <strong>Next</strong> at the bottom.</p>
+<h3 id="step-1-vehicle">Step 1 - Vehicle</h3>
+<p>Enter a <strong>Name</strong> for the machine. This is what appears on the home screen and the run screen.</p>
+<p>Choose how the vehicle's <strong>Heading</strong> (the direction it is pointing) is worked out:</p>
+<div class="tbl"><table><thead><tr><th>Option</th><th>Meaning</th></tr></thead><tbody><tr><td>Raw</td><td>Uses the receiver's heading exactly as reported.</td></tr><tr><td>Smoothed (recommended)</td><td>Filters the heading by fix quality and speed, so the vehicle does not jitter when it is moving slowly or the fix is poor.</td></tr></tbody></table></div>
+<figure><img src="../images/manual/getting-started/03-wizard-vehicle.jpg" alt="Wizard step 1: name and heading" loading="lazy"><figcaption>Wizard step 1: name and heading</figcaption></figure>
+<h3 id="step-2-measurements">Step 2 - Measurements</h3>
+<p>See <a href="getting-started.html#measurements" class="xref">Measurements</a> for what each measurement means and how it is used.</p>
+<h3 id="step-3-gps-source">Step 3 - GPS Source</h3>
+<p>Choose where the position comes from:</p>
+<div class="tbl"><table><thead><tr><th>Source</th><th>Use it when</th></tr></thead><tbody><tr><td>Bluetooth</td><td>The receiver is paired over Bluetooth. Tap <strong>Scan</strong> and select it from the list.</td></tr><tr><td>Wi-Fi</td><td>The receiver is a network device. Scan for or type the network name and password, then enter the receiver's IP address and port.</td></tr><tr><td>Simulation</td><td>You are training, testing or demonstrating without a receiver. The run screen shows on-screen drive arrows.</td></tr></tbody></table></div>
+<p>The switch <strong>Turn on differential RTK when used</strong> tells Exodus the receiver expects correction data. <strong>Advanced</strong> holds the fix-quality interpreter setting.</p>
+<figure><img src="../images/manual/getting-started/11-gps-source.jpg" alt="Wizard step 3: choosing the GPS source" loading="lazy"><figcaption>Wizard step 3: choosing the GPS source</figcaption></figure>
+<figure><img src="../images/manual/getting-started/12-gps-source-simulation.jpg" alt="Simulation selected" loading="lazy"><figcaption>Simulation selected</figcaption></figure>
+<h3 id="step-4-reference-system">Step 4 - Reference System</h3>
+<p>Tells Exodus which coordinate system the receiver reports in. See <a href="getting-started.html#receiver-crs" class="xref">Receiver reference system (CRS)</a>.</p>
+<h3 id="step-5-companion">Step 5 - Companion</h3>
+<p>Choose whether the machine carries a surveyor pole:</p>
+<div class="tbl"><table><thead><tr><th>Option</th><th>Meaning</th></tr></thead><tbody><tr><td>Off</td><td>The receiver stays on the vehicle.</td></tr><tr><td>Surveyor pole</td><td>You can take the receiver off the vehicle to shoot feature points on a pole. You must enter the <strong>Rod height</strong> (ground tip to the antenna).</td></tr></tbody></table></div>
+<figure><img src="../images/manual/getting-started/16-companion-rod-off.jpg" alt="Companion step with the pole off" loading="lazy"><figcaption>Companion step with the pole off</figcaption></figure>
+<figure><img src="../images/manual/getting-started/17-companion-rod-on.jpg" alt="Companion step with the pole on and Rod height required" loading="lazy"><figcaption>Companion step with the pole on and Rod height required</figcaption></figure>
+<p>When every step has a check mark, <strong>Save vehicle</strong> becomes active. If something is missing, a red line above the buttons (for example <em>Still needed: Companion</em>) tells you which step to finish.</p></div>
+<div class="chap" id="measurements"><h2>Measurements</h2><p>Measure the real machine with a tape and enter each value in the measurement list. Every row shows a title, a one-line description and the current value. Tap a row to edit it. Use the <strong>-</strong> and <strong>+</strong> buttons to nudge the value in small steps (the step size is shown at the bottom of the list), or type an exact value. Rows marked <strong>Required</strong> must be filled in before you can continue.</p>
+<p>The diagram at the top has two views: <strong>Side</strong> and <strong>Top</strong> (front is to the right). It highlights the measurement you are editing, and the 3D vehicle on the right turns to show the matching side.</p>
+<h3 id="machine-measurements">Machine measurements</h3>
+<div class="tbl"><table><thead><tr><th>Measurement</th><th>What to measure</th><th>How Exodus uses it</th></tr></thead><tbody><tr><td>Overall length</td><td>Front to back, bumper to bumper.</td><td>Sizes the 3D model so it matches your real machine.</td></tr><tr><td>Overall width</td><td>The widest point, side to side.</td><td>Sizes the 3D model.</td></tr><tr><td>Rear axle from back</td><td>From the back of the vehicle to the rear axle.</td><td>Places the model correctly around the rear axle. The rear axle is also the starting point for the antenna fore/aft offset.</td></tr></tbody></table></div>
+<figure><img src="../images/manual/getting-started/05-measure-length.jpg" alt="Overall length, highlighted in the diagram" loading="lazy"><figcaption>Overall length, highlighted in the diagram</figcaption></figure>
+<figure><img src="../images/manual/getting-started/06-measure-width.jpg" alt="Overall width" loading="lazy"><figcaption>Overall width</figcaption></figure>
+<figure><img src="../images/manual/getting-started/07-measure-rear-axle.jpg" alt="Rear axle from back" loading="lazy"><figcaption>Rear axle from back</figcaption></figure>
+<h3 id="antenna-measurements">Antenna measurements</h3>
+<p>These three values tell Exodus exactly where the receiver sits on the vehicle. The position the receiver reports belongs to the antenna, not the machine, so these offsets are what let Exodus draw the vehicle in the right place.</p>
+<div class="tbl"><table><thead><tr><th>Measurement</th><th>What to measure</th><th>How Exodus uses it</th></tr></thead><tbody><tr><td>Antenna height</td><td>Ground to the antenna.</td><td>Converts the antenna's reported height into the ground height beneath the vehicle.</td></tr><tr><td>Antenna fore/aft</td><td>Distance from the rear axle, forward or back. Choose <strong>Behind</strong> or <strong>Ahead</strong>.</td><td>Sets where the antenna is along the vehicle's length.</td></tr><tr><td>Antenna left/right</td><td>Distance from the vehicle's centerline. Choose <strong>Left</strong> or <strong>Right</strong>.</td><td>Sets where the antenna is across the vehicle's width. Enter 0 if it is on the centerline.</td></tr></tbody></table></div>
+<figure><img src="../images/manual/getting-started/08-measure-antenna-height.jpg" alt="Antenna height" loading="lazy"><figcaption>Antenna height</figcaption></figure>
+<figure><img src="../images/manual/getting-started/09-measure-antenna-foreaft.jpg" alt="Antenna fore/aft with Behind and Ahead" loading="lazy"><figcaption>Antenna fore/aft with Behind and Ahead</figcaption></figure>
+<figure><img src="../images/manual/getting-started/10-measure-antenna-leftright.jpg" alt="Antenna left/right" loading="lazy"><figcaption>Antenna left/right</figcaption></figure>
+<div class="adm tip"><strong>Tip</strong><p>Fore/aft is measured from the <strong>rear axle</strong>, not from the back bumper. Left/right is measured from the <strong>centerline</strong>, not from the edge.</p></div>
+<h3 id="rod-height">Rod height</h3>
+<p>If you turned on the surveyor pole in step 5, <strong>Rod height</strong> is the distance from the ground tip to the antenna on the pole. Exodus subtracts it from the antenna height so points shot on the pole are recorded at ground level.</p></div>
+<div class="chap" id="receiver-crs"><h2>Receiver reference system (CRS)</h2><p>A CRS (coordinate reference system) says what the numbers from the receiver <strong>mean</strong>. The same spot on Earth has different coordinates in different systems, so Exodus must be told which system the receiver outputs.</p>
+<div class="adm important"><strong>Important</strong><p>This is <strong>not</strong> the project's coordinate system. It describes the receiver. The project's system is chosen separately when you create a project (see <a href="getting-started.html#creating-a-project" class="xref">Creating a project</a>). Exodus converts between the two.</p></div>
+<p>The <strong>Reference</strong> step has two settings.</p>
+<figure><img src="../images/manual/getting-started/13-reference-system.jpg" alt="Wizard step 4: Reference System" loading="lazy"><figcaption>Wizard step 4: Reference System</figcaption></figure>
+<h3 id="receiver-horizontal-frame">Receiver horizontal frame</h3>
+<p>The datum the receiver actually outputs. It <strong>must match your correction network</strong>, because the receiver does not report this itself. The default is <strong>WGS 84</strong> (EPSG:4326). Tap the field to search by name or EPSG code.</p>
+<figure><img src="../images/manual/getting-started/14-reference-horizontal-options.jpg" alt="Choosing the receiver horizontal frame" loading="lazy"><figcaption>Choosing the receiver horizontal frame</figcaption></figure>
+<h3 id="receiver-vertical-datum">Receiver vertical datum</h3>
+<p>The height reference the receiver outputs. Leave this as <strong>Ellipsoidal height</strong> unless you know your receiver is configured otherwise.</p>
+<p>Other options (for example EGM96 or EGM2008) apply a geoid model to turn ellipsoidal height into height above mean sea level. Some geoid grids are bundled with the app; the rest show <strong>Download</strong> and must be downloaded before you can select them.</p>
+<figure><img src="../images/manual/getting-started/15-reference-vertical-options.jpg" alt="Choosing the receiver vertical datum" loading="lazy"><figcaption>Choosing the receiver vertical datum</figcaption></figure></div>
+<div class="chap" id="creating-a-project"><h2>Creating a project</h2><p>A project holds everything you survey on one site: benchmarks, markers, lines and terrain.</p>
+<ol><li>On the home screen, tap the <strong>+</strong> tile in the <strong>Project</strong> row.</li><li>Fill in the three sections below.</li><li>Tap <strong>Complete</strong>.</li></ol>
+<figure><img src="../images/manual/getting-started/20-project-create.jpg" alt="The New Project screen" loading="lazy"><figcaption>The New Project screen</figcaption></figure>
+<h3 id="project">Project</h3>
+<p><strong>Project Name</strong> (required) is how the project appears in the project list.</p>
+<h3 id="coordinate-system">Coordinate system</h3>
+<p>These describe the project's <strong>own</strong> coordinates, which is what you see on screen and in exported data.</p>
+<div class="tbl"><table><thead><tr><th>Setting</th><th>Meaning</th></tr></thead><tbody><tr><td>Horizontal reference</td><td>The system the project's coordinates are written in. Pick a geographic system (latitude/longitude, such as WGS 84) or a projected system such as State Plane or UTM. Tap the field to search by name or EPSG code.</td></tr><tr><td>Vertical reference (required)</td><td>The height datum the project's elevations are measured against. You must choose one before you can continue. <strong>Ellipsoidal height</strong> means raw ellipsoidal heights with no geoid applied, meaningful only relative to each other.</td></tr></tbody></table></div>
+<figure><img src="../images/manual/getting-started/21-project-horizontal-picker.jpg" alt="Choosing the project horizontal reference" loading="lazy"><figcaption>Choosing the project horizontal reference</figcaption></figure>
+<figure><img src="../images/manual/getting-started/22-project-vertical-picker.jpg" alt="Choosing the project vertical reference" loading="lazy"><figcaption>Choosing the project vertical reference</figcaption></figure>
+<div class="adm note"><strong>Note</strong><p>The receiver's CRS and the project's CRS are independent. For example, a receiver can output WGS 84 while the project works in a State Plane zone. Exodus converts each position as it arrives.</p></div>
+<h3 id="design-files-optional">Design files (optional)</h3>
+<p>You can import a LandXML (<code>.xml</code> / <code>.landxml</code>) or DXF (<code>.dxf</code>) design file now. Localizing it to your position is done later.</p>
+<figure><img src="../images/manual/getting-started/23-project-bottom.jpg" alt="The bottom of the New Project screen" loading="lazy"><figcaption>The bottom of the New Project screen</figcaption></figure>
+<figure><img src="../images/manual/getting-started/24-project-complete.jpg" alt="A completed New Project form" loading="lazy"><figcaption>A completed New Project form</figcaption></figure></div>
+      <div class="pager"><span></span><a class="next" href="survey.html">Survey run screen &rarr;</a></div>
+    </main>
+  </div>
+  <footer>© <span id="year"></span> Exodus Innovation Systems</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

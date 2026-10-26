@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GPS Diagnostics — Exodus User Manual</title>
+  <meta name="description" content="A read-only window into what your receiver is reporting. Check that corrections are arriving, watch position noise settle, and spot sky obstructions without leaving the app.">
+  <meta name="theme-color" content="#14191C">
+  <link rel="icon" type="image/png" href="../images/emblem.png">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="../index.html"><img src="../images/emblem.png" alt="" width="40" height="40"><img class="wordmark" src="../images/brand-label.png" alt="Exodus Innovation Systems" height="36"></a>
+    <nav>
+      <a href="../index.html#app">The App</a>
+      <a href="../index.html#capabilities">Capabilities</a>
+      <a href="index.html">Manual</a>
+      <a href="../index.html#how">How it works</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="doc-wrap">
+    <nav class="doc-nav" aria-label="Manual chapters"><p class="doc-nav-title"><a href="index.html">User Manual</a></p><ol><li><a href="getting-started.html">Getting started</a></li><li><a href="survey.html">Survey run screen</a></li><li class="on"><a href="gps-diagnostics.html">GPS Diagnostics</a></li><li><a href="tile-plow.html">Tile plow run screen</a></li><li><a href="pipe-design.html">Pipe design</a></li><li><a href="grading.html">Grading and as-installed</a></li><li><a href="tie-in.html">Tie-ins</a></li><li><a href="quick-reference.html">Quick reference</a></li></ol></nav>
+    <main class="doc">
+      <p class="crumb"><a href="index.html">User Manual</a> &rsaquo; GPS Diagnostics</p>
+      <p class="eyebrow">GPS Diagnostics</p>
+      <h1 class="doc-title">See exactly why a fix is poor.</h1>
+      <p class="lead">A read-only window into what your receiver is reporting. Check that corrections are arriving, watch position noise settle, and spot sky obstructions without leaving the app.</p>
+      <div class="cards highlights"><article><h3>Fix type at a glance</h3><p>The header shows the current fix in color, such as RTK Fixed in green.</p></article><article><h3>Position and elevation tracking</h3><p>Plots show whether a stationary receiver is steady or noisy.</p></article><article><h3>Correction age and freshness</h3><p>If the age keeps growing, you know corrections have stopped arriving.</p></article><article><h3>Sky plot and signal strength</h3><p>With a real receiver, see each satellite and its signal quality.</p></article></div>
+      
+      <div class="chap" id="gps-diagnostics"><h2>GPS Diagnostics</h2><p>GPS Diagnostics is a read-only window into what the receiver is reporting. Use it to find out <strong>why</strong> a fix is poor, or to check that corrections are arriving.</p>
+<p>To open it from the run screen, <strong>hold</strong> the GPS icon in the top bar. Tap the back arrow at the top left to return to the run screen.</p>
+<figure><img src="../images/manual/gps-diagnostics/50-gps-diagnostics.jpg" alt="The GPS Diagnostics screen" loading="lazy"><figcaption>The GPS Diagnostics screen</figcaption></figure>
+<p>The header shows the current fix type in color (for example <strong>RTK Fixed</strong> in green). A tab under the header selects which receiver to look at: <strong>Vehicle</strong>, and the rod when the surveyor pole is set up. The two columns scroll separately.</p>
+<div class="adm note"><strong>Note</strong><p>These screenshots were taken in <strong>Simulation</strong>, so a few fields show <strong>N/A</strong>, <strong>-1</strong> or an infinite accuracy value. A real receiver fills them in.</p></div>
+<h3 id="left-column">Left column</h3>
+<div class="tbl"><table><thead><tr><th>Card</th><th>What it tells you</th></tr></thead><tbody><tr><td>Status Overview</td><td>The fix type, the number of satellites used and in view, <strong>HDOP</strong> and the <strong>Age</strong> of the correction data.</td></tr><tr><td>Position Track (E-N)</td><td>A plot of recent positions, east against north, with the path in green and the current spot in orange. Below it are the east range, north range and total distance covered. A receiver sitting still should show a tiny cluster; a large scatter means a noisy position.</td></tr><tr><td>Elevation History (10s)</td><td>A plot of the last 10 seconds of elevation (mean sea level) with the minimum, maximum and the difference. Use it to see how steady the height is.</td></tr><tr><td>Position</td><td>Latitude and longitude, the elevation above the ellipsoid (<strong>HAE</strong>), the <strong>geoid separation</strong> and the elevation above mean sea level (<strong>MSL</strong>).</td></tr><tr><td>Accuracy &amp; Precision</td><td>The receiver's estimate of its <strong>northing</strong>, <strong>easting</strong> and <strong>up</strong> error, and the overall <strong>horizontal accuracy</strong>. Smaller is better.</td></tr></tbody></table></div>
+<figure><img src="../images/manual/gps-diagnostics/53-gps-diagnostics-left-1.jpg" alt="Position track and elevation history" loading="lazy"><figcaption>Position track and elevation history</figcaption></figure>
+<figure><img src="../images/manual/gps-diagnostics/54-gps-diagnostics-left-2.jpg" alt="Position and accuracy cards" loading="lazy"><figcaption>Position and accuracy cards</figcaption></figure>
+<h3 id="right-column">Right column</h3>
+<div class="tbl"><table><thead><tr><th>Card</th><th>What it tells you</th></tr></thead><tbody><tr><td>Satellites</td><td>How many satellites are <strong>used</strong> in the solution out of how many are <strong>in view</strong>, and the utilization percentage.</td></tr><tr><td>Dilution of Precision</td><td><strong>HDOP</strong> (horizontal), <strong>VDOP</strong> (vertical) and <strong>PDOP</strong> (position) as bars, with an overall <strong>DOP Quality</strong> rating. Lower numbers mean the satellites are well spread and the position is more trustworthy.</td></tr><tr><td>Motion &amp; Velocity</td><td>Speed, bearing and course over ground.</td></tr><tr><td>Timing &amp; Corrections</td><td>The <strong>correction age</strong> and a <strong>freshness</strong> bar from fresh to stale. If the age keeps growing, corrections have stopped arriving.</td></tr><tr><td>GPS Source</td><td>Where the data comes from (for example Bluetooth, Wi-Fi or simulated vehicle position) and the protocol, <strong>NMEA 0183</strong>.</td></tr><tr><td>NMEA Input Stream</td><td>The raw sentences the receiver is sending, with a running count of lines received. Useful when talking to support or checking the receiver's output settings.</td></tr></tbody></table></div>
+<figure><img src="../images/manual/gps-diagnostics/51-gps-diagnostics-2.jpg" alt="Motion, timing and source cards" loading="lazy"><figcaption>Motion, timing and source cards</figcaption></figure>
+<figure><img src="../images/manual/gps-diagnostics/52-gps-diagnostics-3.jpg" alt="The raw NMEA input stream" loading="lazy"><figcaption>The raw NMEA input stream</figcaption></figure>
+<p>With a real receiver that is reporting satellite details, two more cards appear:</p>
+<div class="tbl"><table><thead><tr><th>Card</th><th>What it tells you</th></tr></thead><tbody><tr><td>Satellite Sky Plot</td><td>Where each satellite is in the sky, with the count of visible satellites, the count that report a signal, and the average signal strength.</td></tr><tr><td>Signal Strength (SNR)</td><td>A bar for each satellite, colored <strong>Excellent</strong>, <strong>Good</strong>, <strong>Fair</strong> or <strong>Poor</strong>. Many poor bars usually mean a sky obstruction, such as trees or a building.</td></tr></tbody></table></div>
+<p>If no receiver is set up you see <em>No GPS Configured</em>. If the receiver is set up but silent, a message says what it is waiting for, such as <em>Connecting to the GPS source...</em> or <em>Waiting for a position fix...</em></p></div>
+      <div class="pager"><a class="prev" href="survey.html">&larr; Survey run screen</a><a class="next" href="tile-plow.html">Tile plow run screen &rarr;</a></div>
+    </main>
+  </div>
+  <footer>© <span id="year"></span> Exodus Innovation Systems</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
